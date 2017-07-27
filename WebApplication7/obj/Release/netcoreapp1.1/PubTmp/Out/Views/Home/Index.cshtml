@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "Let's play Tic Tac Toe";
+}
+<br />
+<br />
+
+<h2>Let's play Tic Tac Toe</h2>
+<br />
+<div id="img">
+    <img src="~/images/jas.jpg" alt="Jasmine Otome" class="img-responsive" width=" 300px" align="left" />
+    <br />
+    <p id="welcome"> Hey! My name is Jasmine! <br /> I bet you can't bet me in<br /> a game of tic tac toe :P</p>
+</div>
+
+<div id="buttons">
+    <input type="button" id="cpu" value="Jasmine Play First" onclick="CPUFirst();" />
+
+    <input type="button" id="ppl" value="You Play First" onclick="UserFirst();" />
+</div>
+<br />
+<br />
+<style>
+    .square {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+    #message {
+        font-size: 20px;
+    }
+    #buttons{
+        text-align: center;
+    }
+
+    table{
+        margin-left:auto;
+        margin-right: auto;
+    }
+    #bottomStuff{
+        text-align: center;
+    }
+
+  
+</style>
+<head>
+    <script src="~/Scripts/ttt.js"></script>
+</head>
+
+<body onload="startGame();">
+    <table id="table"  border="1">
+       
+        <tr id="row1">
+            <td id="1" class="square" onclick="currentMove(this.id);"></td>
+            <td id="2" class="square" onclick="currentMove(this.id);"></td>
+            <td id="3" class="square" onclick="currentMove(this.id);"></td>
+        </tr>
+        <tr id="row2">
+            <td id="4" class="square" onclick="currentMove(this.id);"></td>
+            <td id="5" class="square" onclick="currentMove(this.id);"></td>
+            <td id="6" class="square" onclick="currentMove(this.id);"></td>
+        </tr>
+        <tr id="row3">
+            <td id="7" class="square" onclick="currentMove(this.id);"></td>
+            <td id="8" class="square" onclick="currentMove(this.id);"></td>
+            <td id="9" class="square" onclick="currentMove(this.id);"></td>
+        </tr>
+    </table>
+    <div id="bottomStuff">
+        <div id="message">    Game On!</div>
+        <br />
+        <br />
+        <a href="http://webapplication720170726024948.azurewebsites.net/">Start Over</a>
+    </div>
+</body>
+
